@@ -1,69 +1,323 @@
-body,h1,h2,h3,h4,h5,h6,ul,li,p{
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-a{
+a {
     text-decoration: none;
 }
-ul{
+ul {
     list-style: none;
 }
-body{
-    font: 14px/1.4 Arial;
-    background-color: #fff2e3;
-    text-align: center;
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
 }
-.btn{
+.button {
     display: inline-block;
-    padding: 4px 6px;
+    font-size: 18px;
+    font-weight:bold;
+    background-color: #F7D258;
     color: #fff;
-    background-color: #72b890;
-    border-radius: 3px;
-
+    padding: 5px 12px;
+    border-radius: 4px;
+}
+.button:hover {
+    background-color:#F4C743;
+}
+.layout {
+    width: 1400px;
+    margin: 0 auto;
+}
+body {
+    font: 15px/1.5 "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;;
+    background-color: #fff;
+    color: #444;
 }
 
-.btn:hover{
-    opacity:0.7;
+html, body {
+    height: 100%;
 }
-.btn:active{
-    opacity: 1;
+header {
+    position: relative;
+    height: 100%;
+    background: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg)
+      center no-repeat;
+    background-size: cover;
 }
-
-.title{
-    color: #ccc;
-    font-size: 50px;
-    margin-top: 40px;
+header .logo {
+    color:#F7D258;
+    font-size: 28px;
+    float: left;
+    margin-top: 30px;
 }
-.description{
-    color: #aaa;
+header .nav{
+    float:right;
+    margin: 20px 250px;
+}
+header .nav > li {
+    float: left;
+    margin: 15px;
+}
+header .nav a {
+    color :#fff;
+    font-size: 13.5px;   
+    padding: 5px;
+    display: inline-block;
+}
+header .nav a :hover {
+    color: #F7D258; 
+}
+header .intro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+header .intro p {
+    font-size: 38px;
+    font-style: oblique;
+}
+header .intro h1 {
+    font-size: 70px;
+    margin-left: -300px;
+    margin-right: -300px;
+} 
+header .intro .button {
+    padding: 18px 35px;
     margin-top: 20px;
 }
-.tab-ct{
-    margin-top: 30px;
+
+section {
+    text-align: center;
+    padding: 130px;
 }
-.tab-ct>li{
+.services {
+    background: #FEFEFF;
+}
+.protgolio {
+    background: #F6F6F7;
+}
+section >h2 {
+    font-size:40px;
+}
+section >p {
+    margin-top: 15px;
+    color: #767677;
+}
+section >ul {
+    margin-top:40px;
+}
+.services > ul .iconfont{
+    font-size: 60px;
+}
+.services >ul >li {
+    width: 33.33%;
+    padding: 10px 20px;
+    float: left;
+}
+.services > ul p {
+    margin-top: 10px;
+}
+.protgolio >ul >li {
+    float: left;
+    width: calc(33.33% - 30px);
+    height: 360px;
+    margin: 15px;
+    background: #FEFEFF;
+}
+.protgolio a {
+    display: block;
+    height: 260px;
+}
+.protgolio a :hover {
+    background: url()
+}
+.protgolio img {
+    width: 100%;
+    height: 100%;
+}
+.protgolio figcaption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+section .timeline > li {
+    margin-top: 100px;
+    position: relative;
+}
+section .timeline > li:nth-child(odd) {
+    padding-right: calc(50% - 85px);
+    text-align: right;
+}
+section .timeline > li:nth-child(even) {
+    padding-left: calc(50% - 85px);
+    text-align: left;
+}
+section .timeline > li::after {
+    content:'';
+    display: block;
+    clear: both;
+
+}
+section .timeline img {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 8px solid #F0F0F1;
+}
+.story {
     display: inline-block;
-    margin-top: 30px;
-    margin: 0 4px;
+    text-align: center;
+    padding-top: 33px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background: #F6D357;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 8px solid #F0F0F1;
 }
-.work-img{
-    margin-top: 40px;
+section .timeline > li:nth-child(odd) dl {
+    margin-right: 200px;
+}
+section .timeline > li:nth-child(even) dl {
+    margin-left: 200px;
+}
+section .timeline > li:nth-child(odd) img {
+    float: right;
+}
+section .timeline > li:nth-child(even) img {
+    float: left;
+}
+section .timeline dt {
+    font-size: 18px;
+    font-weight: bold;
+}
+section .timeline dd:nth-child(2){
+    font-size : 19px;
+    font-weight: bold;
+}
+section .timeline > li::before {
+    content:'';
+    position: absolute;
+    display: inline-block;
+    margin-left: 0px;
+    left: 50%;
+    top: 100%;
+    height: 100px;
+    width: 2px;
+    background-color: #F0F0F1;
+}
+section .timeline > li:last-child::before {
+    height: 0;
+}
+.team {
+    background: #F6F6F7;
+}
+.team > ul >li {
+    width: 33.33%;
+    float: left;
+}
+.team .iconfont ,.final .iconfont{
+    display: inline-block;
+    font-size: 40px;
+    margin: 5px 10px 40px 5px;
+}
+.team >ul >li li {
+    display: inline-block;
+}
+.team img {
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+.website {
+    margin: 0 auto;
+    text-align: center;
+}
+.website li {
+    width: 20%;
+    display: inline-block;
+    margin: 30px 0px;
+}
+.contact {
+    background-color: #222;
+    background-image: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/map-image.png);
+    background-size: cover;
+    height: 780px; 
+    text-align: center;
+    padding:120px 0;
 }
 
-.operate-ct{
-    margin-top: 40px;
+.contact h2{
+    color: #fff;
+    font-size: 40px;
 }
-.operate-ct>li {
+.contact p{
+    font-size: 18px;
+    margin-top: 15px;
+}
+.contact .button {
+    margin-top: 20px;
+    padding: 20px 40px;
+}
+.contant li {
+    height: 50px; 
+    width: 100px;
+}
+.input input {
+    height: 70px;
+    width: 600px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.textarea textarea {
+    height: 250px;
+    width: 600px;
+    margin:10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.input {
+    float:left;
+    width: 50%;
+    margin-top:50px;
+}
+.textarea {
+    float:left;
+    width: 50%;
+    margin-top:50px;
+}
+.final ul {
+    text-align: center;
+    vertical-align: middle;
+}
+.final p {
+    float: left;
+    margin: 40px 100px;
+}
+.final li {
     display: inline-block;
-    margin: 0 4px;
+    margin-top: 20px;
+
 }
-.footer{
-    margin: 30px;
-    color:#aaa;
-}    
-.footer a{
-    color: #72b890;
+.use a {
+    color: #F6D357;
 }
+.use {
+    float: right;
+    margin: 40px 100px;
+    
+}
+
+
 
 
 
